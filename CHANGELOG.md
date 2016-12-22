@@ -1,6 +1,13 @@
 PlacesAutocompleteTextView
 --------------------------
 
+
+Version 0.3
+--------------------------
+- rebuilt project structure to be jitpackable
+- updated dependencies
+
+
 Version 0.2
 --------------------------
 - Language selection support

@@ -1,0 +1,33 @@
+
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion 25
+  buildToolsVersion "25.0.1"
+
+  defaultConfig {
+    applicationId "de.stocard.placesautocompletedemo"
+    minSdkVersion 14
+    targetSdkVersion 25
+    versionCode 1
+    versionName "1.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled true
+    }
+  }
+}
+
+dependencies {
+  compile project(':library')
+
+
+
+}
+dependencies {
+    compile project(':library')
+
+    compile 'com.jakewharton:butterknife:6.0.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+}
