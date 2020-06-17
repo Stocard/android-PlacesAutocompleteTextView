@@ -3,6 +3,7 @@
 
     <style name="PACV.TextAppearance.PlacesAutoComplete" parent="android:TextAppearance">
         <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
     <style name="PACV.Widget.PlacesAutoCompleteTextView" parent="android:Widget.Holo.Light.AutoCompleteTextView">
