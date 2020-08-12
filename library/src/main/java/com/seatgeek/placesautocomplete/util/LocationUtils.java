@@ -1,7 +1,7 @@
 package com.seatgeek.placesautocomplete.util;
 
 import android.location.Location;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public final class LocationUtils {
 

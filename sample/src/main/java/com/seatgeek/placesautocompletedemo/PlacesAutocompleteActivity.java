@@ -13,41 +13,33 @@ import com.seatgeek.placesautocomplete.model.AddressComponentType;
 import com.seatgeek.placesautocomplete.model.Place;
 import com.seatgeek.placesautocomplete.model.PlaceDetails;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 public class PlacesAutocompleteActivity extends Activity {
 
-    @InjectView(R.id.autocomplete)
-    PlacesAutocompleteTextView mAutocomplete;
-
-    @InjectView(R.id.street)
-    TextView mStreet;
-
-    @InjectView(R.id.city)
-    TextView mCity;
-
-    @InjectView(R.id.state)
-    TextView mState;
-
-    @InjectView(R.id.zip)
-    TextView mZip;
+    private PlacesAutocompleteTextView autocompleteTextView;
+    private TextView streetTextView;
+    private TextView cityTextView;
+    private TextView stateTextView;
+    private TextView zipTextView;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_places_autocomplete);
-        ButterKnife.inject(this);
 
-        mAutocomplete.setOnPlaceSelectedListener(new OnPlaceSelectedListener() {
+        autocompleteTextView = findViewById(R.id.autocomplete);
+        streetTextView = findViewById(R.id.street);
+        cityTextView = findViewById(R.id.city);
+        stateTextView = findViewById(R.id.state);
+        zipTextView = findViewById(R.id.zip);
+
+        autocompleteTextView.setOnPlaceSelectedListener(new OnPlaceSelectedListener() {
             @Override
             public void onPlaceSelected(final Place place) {
-                mAutocomplete.getDetailsFor(place, new DetailsCallback() {
+                autocompleteTextView.getDetailsFor(place, new DetailsCallback() {
                     @Override
                     public void onSuccess(final PlaceDetails details) {
                         Log.d("test", "details " + details);
-                        mStreet.setText(details.name);
+                        streetTextView.setText(details.name);
                         for (AddressComponent component : details.address_components) {
                             for (AddressComponentType type : component.types) {
                                 switch (type) {
@@ -62,17 +54,17 @@ public class PlacesAutocompleteActivity extends Activity {
                                     case SUBLOCALITY:
                                         break;
                                     case LOCALITY:
-                                        mCity.setText(component.long_name);
+                                        cityTextView.setText(component.long_name);
                                         break;
                                     case ADMINISTRATIVE_AREA_LEVEL_1:
-                                        mState.setText(component.short_name);
+                                        stateTextView.setText(component.short_name);
                                         break;
                                     case ADMINISTRATIVE_AREA_LEVEL_2:
                                         break;
                                     case COUNTRY:
                                         break;
                                     case POSTAL_CODE:
-                                        mZip.setText(component.long_name);
+                                        zipTextView.setText(component.long_name);
                                         break;
                                     case POLITICAL:
                                         break;

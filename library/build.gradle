@@ -1,29 +1,35 @@
 apply plugin: 'com.android.library'
 
 android {
-  compileSdkVersion 25
-  buildToolsVersion "25.0.1"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
-  defaultConfig {
-    minSdkVersion 10
-    targetSdkVersion 25
-    versionName "0.3.2"
-    versionCode 3
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 28
+        versionName "0.4.0"
+        versionCode 4
 
-    proguardFile 'proguard.cfg'
-    consumerProguardFiles 'proguard.cfg'
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
+        proguardFile 'proguard.cfg'
+        consumerProguardFiles 'proguard.cfg'
     }
-  }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    compile "com.android.support:support-v4:25.1.0"
-    compile 'com.google.code.gson:gson:2.8.0'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-core:1.10.19'
+    implementation "androidx.annotation:annotation:1.1.0"
+    implementation "androidx.core:core:1.1.0"
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.8'
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'org.mockito:mockito-core:2.28.2'
 }

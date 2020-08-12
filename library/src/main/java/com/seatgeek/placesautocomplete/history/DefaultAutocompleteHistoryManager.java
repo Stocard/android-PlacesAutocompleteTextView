@@ -1,9 +1,9 @@
 package com.seatgeek.placesautocomplete.history;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.util.AtomicFile;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.util.AtomicFile;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -16,7 +16,6 @@ import com.seatgeek.placesautocomplete.json.PlacesApiJsonParser;
 import com.seatgeek.placesautocomplete.model.Place;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
