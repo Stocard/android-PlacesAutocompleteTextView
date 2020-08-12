@@ -1,11 +1,15 @@
 PlacesAutocompleteTextView
 --------------------------
 
+Version 0.4
+--------------------------
+- Migrated to AndroidX
+- Updated dependencies
 
 Version 0.3
 --------------------------
-- rebuilt project structure to be jitpackable
-- updated dependencies
+- Rebuilt project structure to be jitpackable
+- Updated dependencies
 
 
 Version 0.2

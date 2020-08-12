@@ -1,6 +1,6 @@
 package com.seatgeek.placesautocomplete.history;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.seatgeek.placesautocomplete.model.Place;
 
