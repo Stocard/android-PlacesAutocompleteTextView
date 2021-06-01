@@ -2,13 +2,12 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion 28
-  buildToolsVersion "28.0.3"
+  compileSdkVersion 30
 
   defaultConfig {
     applicationId "de.stocard.placesautocompletedemo"
-    minSdkVersion 14
-    targetSdkVersion 28
+    minSdkVersion 21
+    targetSdkVersion 30
     versionCode 1
     versionName "1.0"
   }
